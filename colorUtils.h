@@ -8,6 +8,11 @@ typedef enum {
   LUMINOSITY
 } Mode;
 
+typedef enum{
+  NO_ERROR,
+  INVALID_INPUT
+}ErrorCode;
+
 #endif /* MODE_H */
 
 /**
@@ -23,9 +28,9 @@ int min(int a, int b, int c);
 /**
  * TODO: add documentation here
  */
-int toGrayScale(int *r, int *g, int *b, Mode mode);
+ErrorCode int toGrayScale(int *r, int *g, int *b, Mode mode);
 
 /**
  * TODO: add documentation here
  */
-int toSepia(int *r, int *g, int *b);
+ErrorCode int toSepia(int *r, int *g, int *b);
